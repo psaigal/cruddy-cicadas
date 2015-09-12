@@ -1,2 +1,4 @@
-<a href="/logout">Logout</a>
-This is <%= @user.name %> page
+<a href="/logout">Logout</a><br>
+This is <%= @user.name %>'s page<br>
+<a href="/users/<%= @user.id %>/edit">Edit Your Profile</a><br>
+<a href="/users/<%= @user.id %>/tasks/new"><button>+ Task</button></a>

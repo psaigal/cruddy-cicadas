@@ -66,8 +66,10 @@ end
 # render a form for a user to edit their info
 get '/users/:id/edit' do
   @user = User.find_by_id(params[:id])
+  
   # how to confirm this is actually the user?
-  if session[:user_id] == @user.id
+  # if session[:user_id] == @user.id
+  if current_user == @user
     erb :edit_user
   else
     redirect "/users/#{session[:user_id]}"

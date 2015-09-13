@@ -5,6 +5,11 @@
 </head>
 <body>
 
+  <% if current_user %>
+    <h1>OMG, YOUR'E LIKE SOOOOOO LOGGED IN</h1>
+    <a href="/logout">Logout</a><br>
+  <% end %>
+
   <%= yield %>
 
 </body>

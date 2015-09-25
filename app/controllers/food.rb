@@ -17,10 +17,10 @@ end
 #add new food
 post '/users/:user_id/foods' do
   @user = User.find(params[:user_id])
+  x=@user.id
   @food = Food.find_by(name: params[:name])
-  @new_entry = UsersFood.create(user_id: @user.id, food_id: @food.id)
-  p "*"*50
-  p @food.id
+  y=@food.id
+  @new_entry = UsersFood.create(user_id: x, food_id: y)
     if request.xhr?
       erb :'foods/_specificfood', { layout: false, locals: {:user => @user, :food => @food}}
     else
@@ -33,6 +33,8 @@ end
 get '/users/:user_id/foods/:id' do
   @user = User.find(params[:user_id])
   @specific_food = Food.find_by(id: params[:id])
+  p params
+  p "f" *40
   if request.xhr?
     erb :'foods/onefood', layout:false
   else
@@ -43,8 +45,9 @@ end
 #delete specific food for specific user
 delete '/users/:user_id/foods/:id' do
   @user = User.find(params[:user_id])
-  @specific_food = Food.find_by(id: params[:id])
-  @specific_food.destroy
+  @food = Food.find_by(id: params[:id])
+  @food_to_delete = UsersFood.find_by(user_id: @user.id, food_id: @food.id)
+  @food_to_delete.destroy
   redirect "/users/#{@user.id}/foods"
 end
 

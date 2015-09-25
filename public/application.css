@@ -36,6 +36,18 @@ a:hover {
   text-decoration: none;
 }
 
+a:active{
+color: #ffffff;
+font-size: 30px;
+transition: all ease-in-out 200ms;
+}
+
+a:visited{
+  color: #ffffff;
+  font-size: 30px;
+  transition: all ease-in-out 200ms;
+}
+
 h1{
   text-align: center;
   color: #ffffff;
@@ -215,10 +227,26 @@ label:hover:before {
   font-weight: bold;
 }
 
-#foods {
+.foods {
   text-align: center;
   font-size: 30px;
-  margin-top: 175px;
+  margin-top: 200px;
+  color:#ffffff;
+  /*border-radius: 10px;*/
+  border-color: #fae596;
+  margin-bottom: 40px;
+ /* border-style: solid;
+  border-width: medium;
+  position: absolute;
+  left:30%;
+  right:30%;*/
+
+}
+
+#home {
+  text-align: center;
+  font-size: 30px;
+  margin-top: 200px;
   color:#ffffff;
   /*border-radius: 10px;*/
   border-color: #fae596;
@@ -267,10 +295,6 @@ label:hover:before {
   font-size: 25px;
   font-family: 'Varela Round';
   color:#fae596;
-
-  /*border-color: #ffffff;*/
-  /*border-style: solid;*/
-  /*border-width: medium;*/
 }
 
 table, th, td {
@@ -308,3 +332,31 @@ list-style: none;
 #addfoodtitle{
   margin-top: 20px;
 }
+
+#rating{
+  text-align: center;
+}
+
+#rating p{
+  margin: 0 auto;
+  margin-bottom: 5px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  width: 40%;
+  border-color: #fae596;
+  border-style: solid;
+  border-width: medium;
+  border-radius: 15px;
+  font-size: 33px;
+  color:#fae596;
+
+}
+
+#home a{
+  font-size: 50px;
+  color:#fae596
+}
+
+/*.onefood{
+  color:red;
+}*/

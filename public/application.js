@@ -1,7 +1,9 @@
+$(id^=['food'])
 $(document).ready(function(){
+  $("#food" + id).hide();
   addForm();
   submitForm();
-  // foodInfo();
+  foodInfo();
 });
 
 function addForm(){
@@ -31,7 +33,6 @@ function submitForm(){
       var path = $(this).attr('action');
       var route = "POST";
       var userInfo = $(this).serialize();
-      debugger
       $.ajax({
         url: path,
         type: route,
@@ -40,33 +41,38 @@ function submitForm(){
         })
 
       .done(function(response){
-        debugger
         console.log(response)
-        $("#foods").append(response)
+        $(".foods").append(response)
         $("#newfooditem").remove();
         $("a.btn").show();
       })
   })
 }
 
-// function foodInfo(){
-//   $("a.specificfood").on("click", function(event){
-//     event.preventDefault();
+function foodInfo(){
+  $(".foods").on("click", "a", function(event){
+    event.preventDefault();
+    var id = $(this).parent().attr("id")
+    $("#food" + id).show();
+      // var path = $(this).attr('href');
+      // var route = "GET";
+      // console.log(this)
 
-//       var path = $(this).attr('href');
-//       var route = "GET";
+      // $.ajax({
+      //   url: path,
+      //   type: route,
+      //   dataType:'html',
+      //   })
 
-//       $.ajax({
-//         url: path,
-//         type: route,
-//         dataType:'html',
-//         })
 
-//       .done(function(response){
-//         debugger
-//         var id = $("a.specificfood").val('id')
-//         // $(id).find('.points').append(response);
-//         $(id).append(response);
-//       })
-//   })
-// }
+      // .done(function(response){
+        // $("#" + id).show(".onefood");
+        // $(response).slideToggle("slow");
+
+      // })
+  })
+}
+
+
+
+

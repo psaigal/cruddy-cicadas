@@ -1,11 +1,13 @@
 <section id="onefood">
-Glycemic Index: <%= @specific_food.glycemic_index %>
+Glycemic Index: <%= @specific_food.glycemic_index %><br>
   <% if @specific_food.glycemic_index <55 %>
-    <%="Low GI" %>
+    <%="Low GI" %><br>
+    <img src="../../star.png">
   <% elsif @specific_food.glycemic_index <70 %>
-    <%="Middle GI" %>
+    <%="Middle GI" %><br>
   <% else %>
-   <%="High GI" %>
+   <%="High GI" %><br>
+   <img src="../../x.png" height="42" width="42">
   <% end %>
 
   <form method="post" action="/users/<%= @user.id %>/foods/<%= @specific_food.id %>">

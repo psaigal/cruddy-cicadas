@@ -1,5 +1,26 @@
 
 <a href="/users/<%= @user.id %>">Profile Page</a>
+<%  low=[] %>
+<%  middle=[] %>
+<%  high=[] %>
+
+<% @user.foods.each do |food| %>
+  <% if food.glycemic_index <55 %>
+    <% low.push(food) %><br>
+  <% elsif food.glycemic_index <70 %>
+    <% middle.push(food) %><br>
+  <% else %>
+    <% high.push(food) %><br>
+  <% end %>
+<% end %>
+
+<section id="rating">
+<% if middle.length>=3 || high.length>=3 %>
+  <p>Careful! <img src="../../warning.svg" height="75" width="75"></p></p>
+  <% elsif low.length>=3 %>
+    <p>Keep Up the Good Work! <img src="../../Trophy.png" height="75" width="75"></p>
+<% end %>
+</section>
 
 <h1><%= @user.name %>'s Food Journal</h1>
 

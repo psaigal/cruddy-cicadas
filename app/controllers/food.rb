@@ -44,7 +44,8 @@ end
 delete '/users/:user_id/foods/:id' do
   @user = User.find(params[:user_id])
   @specific_food = Food.find_by(id: params[:id])
-  @specific_food.destroy
+  @food_to_delete = UsersFood.find_by(user_id: @user.id, food_id: @specific_food.id)
+  @food_to_delete.destroy
   redirect "/users/#{@user.id}/foods"
 end
 

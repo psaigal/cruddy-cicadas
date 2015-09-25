@@ -1,0 +1,22 @@
+ <section id="newfooditem">
+ <h3>Add New Food Item</h3>
+ <div class="text-center">
+  <!-- Main Form -->
+  <div class="login-form-1">
+      <form id="login-form" class="text-left" method="post" action="/users/<%= @user.id %>/foods">
+      <div class="login-form-main-message"></div>
+      <div class="main-login-form">
+        <div class="login-group">
+          <div class="form-group">
+            <label for="name" class="sr-only">Name</label>
+            <input type="text" class="form-control" id="lg_name" name="name" placeholder="Food Name">
+          </div>
+        <input type="submit" class="login-button">
+      </div>
+    </form>
+  </div>
+</div>
+</section>
+
+
+

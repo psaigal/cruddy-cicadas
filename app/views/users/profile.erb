@@ -1,0 +1,13 @@
+<h1>Welcome <%= @user.name %>!</h1>
+
+
+<section id="foods">
+<a href="/users/<%= @user.id %>/foods">View Your Daily Food Journal</a><br>
+<a href="/users/<%= @user.id %>/edit">Edit Information</a><br>
+<a href="/logout">Logout</a><br>
+ <form method="post" action="/users/<%= @user.id %>">
+  <input type="hidden" name="_method" value="delete"><br>
+  <input id="delete" type="submit" value="Delete Account">
+</form>
+</section>
+

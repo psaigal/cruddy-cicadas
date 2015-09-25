@@ -1,0 +1,15 @@
+<section id="onefood">
+Glycemic Index: <%= @specific_food.glycemic_index %>
+  <% if @specific_food.glycemic_index <55 %>
+    <%="Low GI" %>
+  <% elsif @specific_food.glycemic_index <70 %>
+    <%="Middle GI" %>
+  <% else %>
+   <%="High GI" %>
+  <% end %>
+
+  <form method="post" action="/users/<%= @user.id %>/foods/<%= @specific_food.id %>">
+    <input type="hidden" name="_method" value="delete">
+    <input id="delete" type="submit" value="Delete">
+  </form>
+</section>

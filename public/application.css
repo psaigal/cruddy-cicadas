@@ -1,0 +1,310 @@
+/*------------------------------------------------------------------
+[Master Stylesheet]
+
+Project     : Aether
+Version   : 1.0
+Last change : 2015/03/27
+-------------------------------------------------------------------*/
+/*------------------------------------------------------------------
+[Table of contents]
+
+1. General Structure
+2. Anchor Link
+3. Text Outside the Box
+4. Main Form
+5. Login Button
+6. Form Invalid
+7. Form - Main Message
+8. Custom Checkbox & Radio
+9. Misc
+-------------------------------------------------------------------*/
+/*=== 1. General Structure ===*/
+
+body {
+  background: #89bdd3;
+  padding: 10px;
+  font-family: 'Varela Round';
+}
+/*=== 2. Anchor Link ===*/
+a {
+  color: #ffffff;
+  font-size: 30px;
+  transition: all ease-in-out 200ms;
+}
+a:hover {
+  color: #e3e3e3;
+  text-decoration: none;
+}
+
+h1{
+  text-align: center;
+  color: #ffffff;
+  font-size: 70px;
+}
+
+h3{
+  text-align: center;
+  color: #fae596;
+  font-size: 40px;
+}
+
+p{
+  color:#fae596;
+  font-size: 30px;
+}
+/*=== 3. Text Outside the Box ===*/
+.etc-login-form {
+  color: #ffffff;
+  padding: 10px 20px;
+}
+.etc-login-form p {
+  margin-bottom: 5px;
+  text-align: center;
+}
+/*=== 4. Main Form ===*/
+#lg_name{
+  font-size: 25px;
+}
+
+#lg_email{
+  font-size: 25px;
+}
+
+#lg_password{
+  font-size: 25px;
+}
+
+
+.login-form-1 {
+  max-width: 500px;
+  border-radius: 5px;
+  display: inline-block;
+}
+.main-login-form {
+  position: relative;
+}
+.login-form-1 .form-control {
+  border: 0;
+  box-shadow: 0 0 0;
+  border-radius: 0;
+  background: transparent;
+  color: #555555;
+  padding: 7px 0;
+  font-weight: bold;
+  height:auto;
+}
+.login-form-1 .form-control::-webkit-input-placeholder {
+  color: #999999;
+}
+.login-form-1 .form-control:-moz-placeholder,
+.login-form-1 .form-control::-moz-placeholder,
+.login-form-1 .form-control:-ms-input-placeholder {
+  color: #999999;
+}
+.login-form-1 .form-group {
+  margin-bottom: 0;
+  border-bottom: 2px solid #efefef;
+  padding-right: 20px;
+  position: relative;
+}
+.login-form-1 .form-group:last-child {
+  border-bottom: 0;
+}
+.login-group {
+  background: #ffffff;
+  color: #999999;
+  border-radius: 8px;
+  padding: 10px 20px;
+}
+.login-group-checkbox {
+  padding: 5px 0;
+}
+/*=== 5. Login Button ===*/
+.login-form-1 .login-button {
+  position: absolute;
+  right: -25px;
+  top: 50%;
+  background: #ffffff;
+  color: #999999;
+  padding: 11px 0;
+  width: 100px;
+  height: 100px;
+  margin-top: -25px;
+  border: 5px solid #fae596;
+  border-radius: 50%;
+  transition: all ease-in-out 500ms;
+}
+.login-form-1 .login-button:hover {
+  color: #555555;
+  transform: rotate(450deg);
+}
+.login-form-1 .login-button.clicked {
+  color: #555555;
+}
+.login-form-1 .login-button.clicked:hover {
+  transform: none;
+}
+.login-form-1 .login-button.clicked.success {
+  color: #2ecc71;
+}
+.login-form-1 .login-button.clicked.error {
+  color: #e74c3c;
+}
+/*=== 6. Form Invalid ===*/
+label.form-invalid {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 5;
+  display: block;
+  margin-top: -25px;
+  padding: 7px 9px;
+  background: #777777;
+  color: #ffffff;
+  border-radius: 5px;
+  font-weight: bold;
+  font-size: 11px;
+}
+label.form-invalid:after {
+  top: 100%;
+  right: 10px;
+  border: solid transparent;
+  height: 0;
+  width: 0;
+  position: absolute;
+  pointer-events: none;
+  border-color: transparent;
+  border-top-color: #777777;
+  border-width: 6px;
+}
+/*=== 7. Form - Main Message ===*/
+.login-form-main-message {
+  background: #ffffff;
+  color: #999999;
+  border-left: 3px solid transparent;
+  border-radius: 3px;
+  margin-bottom: 8px;
+  font-weight: bold;
+  height: 0;
+  padding: 0 20px 0 17px;
+  opacity: 0;
+  transition: all ease-in-out 200ms;
+}
+.login-form-main-message.show {
+  height: auto;
+  opacity: 1;
+  padding: 10px 20px 10px 17px;
+}
+.login-form-main-message.success {
+  border-left-color: #2ecc71;
+}
+.login-form-main-message.error {
+  border-left-color: #e74c3c;
+}
+
+}
+/* hover style just for information */
+label:hover:before {
+  border: 1px solid #f6f6f6 !important;
+}
+
+.logo {
+  padding: 15px 0;
+  font-size: 40px;
+  color: #ffffff;
+  font-weight: bold;
+}
+
+#foods {
+  text-align: center;
+  font-size: 30px;
+  margin-top: 175px;
+  color:#ffffff;
+  /*border-radius: 10px;*/
+  border-color: #fae596;
+  margin-bottom: 40px;
+ /* border-style: solid;
+  border-width: medium;
+  position: absolute;
+  left:30%;
+  right:30%;*/
+
+}
+
+#delete {
+  background-color: #89bdd3;
+  border: none;
+  color: #fae596;
+}
+
+.btn {
+  margin: 0px;
+  -webkit-border-radius: 25;
+  -moz-border-radius: 25;
+  border-radius: 25px;
+  text-shadow: 2px 1px 0px #666666;
+  -webkit-box-shadow: 6px 6px 11px #666666;
+  -moz-box-shadow: 6px 6px 11px #666666;
+  box-shadow: 6px 6px 11px #666666;
+  color: #89bdd3;
+  font-size: 35px;
+  background: #fae596;
+  padding: 5px 10px 5px 10px;
+  border: solid #fae596 4px;
+  text-decoration: none;
+  position: absolute;
+  left:30%;
+  right:30%;
+}
+
+.btn:hover {
+  background: #9ad3de;
+  text-decoration: none;
+  color:#ffffff;
+}
+
+#onefood{
+  font-size: 25px;
+  font-family: 'Varela Round';
+  color:#fae596;
+
+  /*border-color: #ffffff;*/
+  /*border-style: solid;*/
+  /*border-width: medium;*/
+}
+
+table, th, td {
+   border: 6px solid #fae596;
+   color:#ffffff;
+   font-family: 'Varela Round';
+   font-size: 25px;
+   table-layout: fixed;
+   text-align: center;
+}
+
+#newfooditem{
+  border-color: #fae596;
+  border-style: solid;
+  border-width: 5px;
+  position: absolute;
+  left:30%;
+  right:30%;
+  border-radius:20px;
+  padding-right:10px;
+  padding-left:10px;
+  padding-top:10px;
+  padding-bottom:50px;
+}
+
+ul {
+ list-style: none;
+}
+
+li {
+margin: 1em 0;
+list-style: none;
+}
+
+#addfoodtitle{
+  margin-top: 20px;
+}

@@ -1,5 +1,6 @@
 require 'rake'
 require 'rspec/core/rake_task'
+require 'csv'
 
 
 require ::File.expand_path('../config/environment', __FILE__)
@@ -144,3 +145,12 @@ desc "Run the specs"
 RSpec::Core::RakeTask.new(:spec)
 
 task :default  => :spec
+
+# require 'csv'
+# desc "Imports a CSV file into an ActiveRecord table"
+# task :import, [:filename] => :environment do
+#   CSV.foreach("gi_values.csv", :headers => true, :header_converters => :symbol) do |row|
+#     Food.create!(row.to_hash)
+#   end
+# end
+

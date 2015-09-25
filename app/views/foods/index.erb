@@ -1,0 +1,22 @@
+
+<a href="/users/<%= @user.id %>">Profile Page</a>
+
+<h1><%= @user.name %>'s Food Journal</h1>
+
+<section id="addfoodtitle">
+<a href="/users/<%= @user.id %>/foods/new" class="btn">Add New Food</a>
+</section>
+
+<section id="foods">
+
+<% @user.foods.each do |food| %><br>
+<ul>
+  <%= erb :'foods/_specificfood', { layout: false, locals: {:user => user, :food => food}} %>
+</ul>
+  <% end %>
+
+</section>
+
+
+
+
